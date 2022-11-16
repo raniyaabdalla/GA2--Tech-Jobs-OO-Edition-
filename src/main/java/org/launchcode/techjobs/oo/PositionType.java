@@ -13,12 +13,12 @@ public class PositionType {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         PositionType that = (PositionType) o;
-        return id == that.id && Objects.equals(value, that.value);
+        return id == that.id;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, value);
+        return Objects.hash(id);
     }
 
     public PositionType() {
@@ -36,6 +36,7 @@ public class PositionType {
     public String toString(){
         return value;
     }
+
     // TODO: Add custom equals and hashCode methods. Consider two PositionType objects "equal" when
     //  their id fields match.
 
